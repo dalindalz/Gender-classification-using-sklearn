@@ -1,30 +1,8 @@
-# from sklearn import tree
-# from sklearn.neighbors import NearestNeighbors
-# from sklearn.svm import SVC
-#
-# # [height, weight, shoe size]
-# clf1 = SVC()
-#
-# X = [[181, 80, 44], [177, 70, 43], [160, 60, 38], [154, 54, 37], [166, 65, 40],
-#      [190, 90, 47], [175, 64, 39],
-#      [177, 70, 40], [159, 55, 37], [171, 75, 42], [181, 85, 43]]
-#
-# Y = ['male', 'male', 'female', 'female', 'male', 'male', 'female', 'female',
-#      'female', 'male', 'male']
-#
-# clf1 = clf1.fit(X,Y)
-#
-# prediction = clf1.predict([[160, 55, 30]])
-#
-# print(prediction)
-
-#Importing modules
 from sklearn import tree
 from sklearn import svm
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.neural_network import MLPClassifier
-
 
 #Feature set - Data: [height, weight, shoe_size]
 X = [[181, 80, 44], [177, 70, 43], [160, 60, 38], [154, 54, 37], [166, 65, 40], [190, 90, 47], [175, 64, 39], [177, 70, 40], [159, 55, 37], [171, 75, 42], [181, 85, 43]]
@@ -68,7 +46,6 @@ probaKN = clfKN.predict_proba (test)
 probaGP = clfGP.predict_proba (test)
 probaMLP = clfMLP.predict_proba (test)
 
-
 print ("DT Classifier test data {} is predicted as {} with probability of {}".format(test, predictionDT, probaDT))
 
 print ("SV Classifier test data {} is predicted as {} with probability of {}".format(test, predictionSVC, probaSVC))
@@ -78,4 +55,5 @@ print ("KN classifier test data {} is predicted as {} with probability of {}".fo
 print ("GP classifier test data {} is predicted as {} with probability of {}".format(test, predictionGP, probaGP ))
 
 print ("MLPClassifier test data {} is predicted as {} with probability of {}".format(test, predictionDT, probaDT))
+
 
